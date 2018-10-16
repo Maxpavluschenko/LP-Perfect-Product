@@ -1,28 +1,3 @@
-@font-face  
-      font-family: Raleway-Light
-      src: url('../fonts/Raleway-Light.ttf') format('truetype')
-      font-weight: normal
-      font-style: normal
-@font-face  
-      font-family: Raleway-Medium
-      src: url('../fonts/Raleway-Medium.ttf') format('truetype')
-      font-weight: normal
-      font-style: normal
-@font-face  
-      font-family: Raleway-Bold
-      src: url('../fonts/Raleway-Bold.ttf') format('truetype')
-      font-weight: normal
-      font-style: normal
-@font-face  
-      font-family: Raleway-SemiBold
-      src: url('../fonts/Raleway-SemiBold.ttf') format('truetype')
-      font-weight: normal
-      font-style: normal
-@font-face  
-      font-family: Raleway-Regular
-      src: url('../fonts/Raleway-Regular.ttf') format('truetype')
-      font-weight: normal
-      font-style: normal
 
 $green-color: #0e7200
 
@@ -36,6 +11,7 @@ $green-color: #0e7200
       
 .container
       max-width: 1546px
+      margin: 0 auto
 .wrapper
       max-width: 1230px
       margin: 0 auto
@@ -45,16 +21,7 @@ body
 p 
       margin: 0
 header
-      height: 100vh
-      display: flex
-      flex-direction: column
-      position: relative
-      background:
-            image: url('../img/header-bg-img.jpg')
-            repeat: no-repeat
-            size: cover
-            position: center 100%
-      padding: 0 10px
+      background-color: #e4e5e9
       .header
             display: flex
             width: 100%
@@ -62,23 +29,26 @@ header
             top: 0
             right: 0
             left: 0
-            display: flex
-            padding: 0 10px
+            padding: 5px 30px
             box-sizing: border-box
             z-index: 10
             align-items: center
             justify-content: space-between
+            .header-logo
+                  display: flex
+                  img
+                        max-height: 65px          
       nav
             padding: 0
             margin: 0
       .menu
             list-style-type: none
+            display: flex
             position: relative
             overflow: hidden
             padding: 0
             margin: 0
             li
-                  float: left
                   list-style-type: none
                   margin-right: 45px
                   padding: 17px 0
@@ -88,7 +58,7 @@ header
                   &:last-child
                         margin-right: 0
                   a
-                        font-family: Raleway-Regular 
+                        font-family: 'Raleway', sans-serif 
                         text-decoration: none
                         display: inline-block
                         font-size: 14px
@@ -96,278 +66,295 @@ header
                         text-transform: uppercase
                         &:hover
                               text-decoration: underline
-
       .menuBurger
             color: #fff
             padding: 10px 15px
             cursor: pointer
             display: none
-
-      .header-search
-            display: flex
-            flex-direction: column
-            justify-content: center
-            h1
-                  font-family: Raleway-Bold 
-                  font-size: 45px
-                  margin: 0
-                  text-align: center
-                  padding-top: 200px
-                  span
-                        color: $green-color
-            ul
-                  text-align: center 
-                  padding: 26px 0 48px 0
-                  margin: 0
-                  li 
-                        display: inline-block
-                        list-style-type: none
-                        background:
-                              image: url('../img/dote.jpg')
-                              repeat: no-repeat
-                              size: inherit
-                              position: left 50%
-                        padding-left: 8px
-                        &:first-child
-                              background-image: none                           
-                              
-                  a
-                        font-family: Raleway-Light
-                        text-decoration: none
-                        color: #78787a 
-                        font-size: 18px
-                        text-transform: uppercase
-                        &:hover
-                              text-decoration: underline
-                              color: black
-      .search-form
-            display: flex
-            justify-content: center
-            padding-bottom: 200px
-            select
-                  color: #818181
-                  border: none
-                  outline: none
-                  height: 58px
-                  cursor: pointer
-                  padding: 15px 45px 15px 43px
-                  border-top-left-radius: 10px
-                  border-bottom-left-radius: 10px
-                  box-shadow: 2px 3px 4px 1px #caccd0
-                  appearance: none
-                  -webkit-appearance: none
-                  -moz-appearance: none
-                  background:
-                        image: url('../img/shape.png')
-                        repeat: no-repeat
-                        position: right center
-                        position-x: 114px 
-            input
-                  height: 58px
-                  border: none
-                  width: 630px
-                  outline: none
-                  padding: 10px 10px
-                  font-size: 20px
-                  border-left: 1px solid #cdcdcd
-                  box-shadow: 2px 3px 4px 1px #caccd0
-            button
-                  font-family: Raleway-SemiBold
-                  background: #4dadbb
-                  font-size: 16px
-                  text-transform: uppercase
-                  color: #fff
-                  padding: 20px 20px 20px 20px
-                  border: none
-                  outline: none
-                  cursor: pointer
-                  border-top-right-radius: 10px
-                  border-bottom-right-radius: 10px
-                  box-shadow: 2px 3px 4px 1px #caccd0
-                  &:hover
-                        opacity: 0.8
-      .other-categories
-            text-align: center
-            padding-bottom: 60px
-            a
-                  font-family: Raleway-Regular
-                  background-color: rgba(255,255,255,0.7) 
-                  font-size: 14px
-                  padding: 25px 20px 25px 53px
-                  margin-right: 30px
-                  @extend %img-button
-                  &:hover
-                      background-color: rgba(255,255,255,1)  
-            .all-categories
-                  background-image: url('../img/icon-category.jpg')
-            .how-works
-                  background-image: url('../img/icon-work.jpg')   
 main
       background-color: #f7f7f7
-      font-family: Raleway-ExtraLight
-      .products-title
-            padding: 60px 0
+.top-search
+      display: flex
+      flex-direction: column
+      background:
+            image: url('../img/header-bg-img.jpg')
+            repeat: no-repeat
+            size: cover
+            position: center 100% 
+.top-search-center
+      margin-top: 220px
+.top-search-title
+      h1
+            font-family: 'Raleway', sans-serif
+            font-weight: 700 
+            font-size: 45px
+            color: #484848
+            margin: 0
             text-align: center
-            h2
-                  font-family: Raleway-Regular 
-                  font-size: 30px
-                  margin: 0
-                  margin-bottom: 25px
-            p 
-                  font-family: Raleway-Regular
-                  font-size: 16px
+            margin-bottom: 3%
+            span
+                  color: $green-color
+.top-search-subtitle
+      ul
+            text-align: center 
+            margin: 0
+            padding: 0
+            margin-bottom: 4%
+            li 
+                  display: inline-block
+                  font-family: 'Raleway', sans-serif
+                  font-weight: 300
+                  list-style-type: none
                   color: #6e6e6e
-      .products-items
-            display: flex
-            flex-wrap: wrap
-            justify-content: space-evenly
-      .products-item
-            background-color: #fff
-            text-decoration: none
-            width: 325px
-            height: auto
-            overflow: hidden
-            padding: 10px
-            box-sizing: border-box
-            margin-bottom: 20px
-            margin-right: 20px
-      .other
-            display: none
-      .other-active
-            display: block
-      
-      .item-img
-            display: block
-            position: relative
-            width: 100%
-            height: 250px
-            overflow: hidden
-            img 
-                  position: absolute
-                  top: 0
-                  left: 50%
-                  transform: translateX(-50%)
-                  min-width: 100%
-                  min-height: 100%
-      .item-title
-            font-family: Raleway-Medium 
-            color: #8c8c8c
+                  font-size: 18px
+                  text-transform: uppercase
+                  background:
+                        image: url('../img/dote.jpg')
+                        repeat: no-repeat
+                        size: inherit
+                        position: left 50%
+                  padding-left: 8px
+                  &:first-child
+                        background-image: none                                                     
+                  
+.top-form
+      display: flex
+      justify-content: center
+      select
+            color: #818181
+            border: none
+            outline: none
+            height: 58px
+            cursor: pointer
+            padding: 15px 45px 15px 43px
+            border-top-left-radius: 10px
+            border-bottom-left-radius: 10px
+            box-shadow: 2px 3px 4px 1px #caccd0
+            font-family: 'Raleway', sans-serif
+            appearance: none
+            -webkit-appearance: none
+            -moz-appearance: none
+            background:
+                  image: url('../img/shape.png')
+                  repeat: no-repeat
+                  position: right center
+                  position-x: 114px 
+                  color: #fff
+      input
+            height: 58px
+            border: none
+            width: 630px
+            outline: none
+            padding: 10px 10px
+            font-size: 20px
+            font-family: 'Raleway', sans-serif
+            border-left: 1px solid #cdcdcd
+            box-shadow: 2px 3px 4px 1px #caccd0
+      button
+            font-family: 'Raleway', sans-serif
+            font-weight: 600
+            background: #00afbd
             font-size: 16px
-            padding: 15px 5px 20px 5px
-      .products-link
-            text-align: center
-            padding: 40px 0 50px
-            a
-                  color: #00afbd
-                  font-size: 16px
-                  font-family: Raleway-Regular
-                  &:hover
-                        text-decoration: none
+            text-transform: uppercase
+            color: #fff
+            padding: 20px 20px 20px 20px
+            border: none
+            outline: none
+            cursor: pointer
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            box-shadow: 2px 3px 4px 1px #caccd0
+            &:hover
+                  opacity: 0.8
+.other-categories
+      display: flex
+      justify-content: center
+      margin-top: 70px
+      margin-bottom: 31px
+      a
+            font-family: 'Raleway', sans-serif
+            font-weight: normal
+            background-color: rgba(255,255,255,0.7) 
+            font-size: 14px
+            padding: 25px 20px 25px 53px
+            @extend %img-button
+            &:hover
+                  background-color: rgba(255,255,255,1)  
+      .all-categories
+            background-image: url('../img/icon-category.png')
+            margin-right: 15px
+      .how-works
+            background-image: url('../img/icon-work.png')
+            margin-left: 15px  
 
-/*  SLICK  */
+.products-title
+      padding: 60px 0
+      text-align: center
+      h2
+            font-family: 'Raleway', sans-serif 
+            font-weight: normal
+            font-size: 30px
+            color: #181717
+            margin: 0
+            margin-bottom: 25px
+      p 
+            font-family: 'Raleway', sans-serif
+            font-weight: normal
+            font-size: 16px
+            color: #6e6e6e
+.products-items
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-evenly
+.products-item
+      background-color: #fff
+      text-decoration: none
+      width: 325px
+      height: auto
+      overflow: hidden
+      padding: 10px
+      box-sizing: border-box
+      margin-bottom: 20px
+.other
+      display: none
+.other-active
+      display: block
+
+.item-img
+      display: block
+      width: 100%
+      height: 250px
+      img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+.item-title
+      font-family: 'Raleway', sans-serif
+      font-weight: 500
+      color: #8c8c8c
+      font-size: 16px
+      padding: 15px 5px 20px 5px
+.products-link
+      text-align: center
+      padding: 40px 0 50px
+      a
+            color: #57b1be
+            font-size: 16px
+            font-family: 'Raleway', sans-serif
+            &:hover
+                  text-decoration: none
 
 .testimonials
       background-color: #00afbd
-      .title 
-            text-align: center
+      h2
+            font-family: 'Raleway', sans-serif 
+            font-weight: normal
             font-size: 30px
-            margin: 0
-            font-family: Raleway-Regular
             color: #f8f6f9
-            padding: 70px 0 30px
+            padding: 5% 0 2%
+            margin: 0
+            text-align: center
       .subtitle
             text-align: center
             font-size: 16px
             color: #f8f6f9
-            font-family: Raleway-Regular
+            font-family: 'Raleway', sans-serif
             margin-bottom: 35px
 .slide-cont
-      max-width: 80%
+      max-width: 74%
       margin: 0 auto
       padding-bottom: 100px 
-      display: flex
-      flex-direction: column
-      align-items: stretch
 
-.center .slick-slide
-      height: auto
-      opacity: 0.3
-      border-radius: 17px
-      transform: scale(0.8)
-      z-index: 1000
-.center .slick-center
-      transform: scale(1.1)
-      opacity: 1
-      z-index: 3000
-      max-width: 680px
-      margin: 0 auto
-      position: static
-.slick-track
-      display: flex
-div.slick-list.draggable
-     padding: 87px 200px !important
-div.slick-slide.slick-current.slick-active.slick-center
-      position: relative
+.slick-slider 
+      margin-left: -12%
+      margin-right: -12%
+.slick-list 
+      padding-top: 110px!important
+      padding-bottom: 10%!important
+      padding-left: 15%!important
+      padding-right: 15%!important
+.slick-track 
+      max-width: 100% !important
+      transform: translate3d(0, 0, 0) !important
+      perspective: 100px
+.slick-slide 
+      position: absolute
+      top: 0
       left: 0
-.slick-initialized .slick-slide
+      right: 0
+      bottom: 0
+      margin: auto
+      opacity: 0
+      width: 100%!important
+      transform: translate3d(0, 0, 0)
+      transition: transform 1s, opacity 1s
+.slick-snext,
+.slick-sprev 
+      display: block
+.slick-current 
+      opacity: 1
       position: relative
-      right: -18.7% 
-
-.slick-slide
-      background: #fff
-      height: auto
-
-.slide-wrapper
-      padding: 6.5%
+      display: block
+      transform: scale(1.3)
+      z-index: 2000
+      outline: none
+.slick-snext 
+      opacity: 0.5
+      transform: translateX(33%)
+      z-index: 1000
+.slick-sprev 
+      opacity: 0.5
+      transform: translateX(-33%)
+      z-index: 1000
+.slide-item 
       display: flex
       flex-direction: column
-      align-items: center
       justify-content: space-between
-      height: 84%
+      width: 75%
+      max-width: 535px
+      background: #fff
+      border-radius: 20px
+      margin: 0 auto
+      height: 340px
       .avatar
             border-radius: 50%
-            padding: 6px
+            padding: 15px 0 0
             background: #ffffff
-            position: relative
-            top: -86px
+            height: 42px
             div
                   overflow: hidden
                   border-radius: 50%
-                  width: 125px
+                  width: 107px
+                  box-sizing: border-box
+                  margin: 0 auto
+                  padding: 5px
+                  background-color: #fff
+                  position: relative
+                  top: -60px
             img
-                  width: 100%
-.slick-next
-      right: -80px
-.slick-next:before
-      content: url('../img/next.png')
-.slick-prev
-      left: -80px
-.slick-prev:before
-      content: url('../img/prev.png')
-.slide-wrapper
-      .slide-feedback
-            text-align: center
-            position: relative
-            top: -50px
+                  width: 100%  
+                  border-radius: 50%    
+      .slide-text
+            padding: 5% 7% 7.5% 7%
             p 
-                  color: #101010
-                  font-size: 14px
-                  font-family: Raleway-Regular
-                  line-height: 1.4
-      .footer
-            display: flex
-            flex-direction: column
-            .name
-                  font-size: 18px
-                  font-family: Raleway-Bold
-                  color: #68c3ce
+                  color: #484748
+                  font-size: 13px
                   text-align: center
-                  margin-bottom: 15px
-            .position
-                  font-size: 14px
-                  color: #939293
-                  font-family: Raleway-Light
-                  text-align: center
+                  line-height: 1.5
+                  font-family: 'Raleway', sans-serif
+      .name
+            font-size: 18px
+            font-family: 'Raleway', sans-serif
+            font-weight: 700
+            color: #00afbd
+            text-align: center
+      .position
+            font-size: 14px
+            color: #9c9b9c
+            font-family: 'Raleway', sans-serif
+            font-weight: 300
+            text-align: center
+            padding: 1.5% 0 5.5%
 
 .feedback
       padding: 60px 0 40px
@@ -377,23 +364,33 @@ div.slick-slide.slick-current.slick-active.slick-center
             margin: 0
             text-align: center
             padding: 0 0 30px
-            font-family: Raleway-Regular
+            font-family: 'Raleway', sans-serif
       #feedback-form  
-            max-width: 550px
-            padding: 2%
-            border-radius: 3px
+            max-width: 500px
+            padding: 0 10px
+            display: flex
+            flex-direction: column
             margin: 0 auto
             label 
-                  float: left
                   display: block
-                  clear: right
-                  font-family: Raleway-Bold
+                  width: 100%
+                  font-size: 17px
+                  font-weight: 400
+                  margin-bottom: 1%
+                  font-family: 'Raleway', sans-serif
             input
-                  font-family: Raleway-Regular
+                  font-family: 'Raleway', sans-serif
+                  padding: 1.5% 2%
+                  margin-bottom: 2%
+                  font-size: 13px
+                  outline: none
+                  border: none
             textarea
-                  font-family: Raleway-Regular
-            .message
-                  margin-top: 33px
+                  font-family: 'Raleway', sans-serif
+                  padding: 1.5% 2%
+                  margin-bottom: 4%
+                  border: none
+                  outline: none
             input:required:valid
                   background:
                         image: url('../img/valid-icon.png')
@@ -403,160 +400,108 @@ div.slick-slide.slick-current.slick-active.slick-center
                         size: 17px
                   box-shadow: 0 0 5px #5cd053
                   border-color: #28921f
-
             .file-upload 
-                  position: relative
-                  overflow: hidden
-                  width: 20% 
-                  height: 15px
-                  background: #6da047
+                  width: max-content 
                   background: #6da047
                   border-radius: 3px
-                  padding: 10px 4px
+                  padding: 7px 10px
                   color: #fff
                   text-align: center
-                  margin-left: 133px
                   input[type="file"]
                         display: none
                   label 
                         display: block
                         width: 100%
-                        height: 100%
                         cursor: pointer
-                        position: absolute
-                        top: 0
-                        left: 0
                   span 
-                        line-height: 36px
                         font-size: 16px
-                        font-family: Raleway-Regular
+                        font-family: 'Raleway', sans-serif
             .filename 
                   background: #f1f1f1
+                  font-family: 'Raleway', sans-serif
                   border: 0
-                  margin-left: 64px
-                  margin-bottom: 10px
+                  margin-bottom: 1%
                   line-height: 20px
-            .w100 
-                  float: right
-                  max-width: 400px
-                  width: 97%
-                  margin-bottom: 1em
-                  padding: 1.5%
-            .border
-                  border-radius: 1px
-                  border-width: 1px
-                  border-style: solid
-                  border-color: #C0C0C0 #D9D9D9 #D9D9D9
-                  box-shadow: 0 1px 1px rgba(255,255,255,.5), 0 1px 1px rgba(0,0,0,.1) inset
-                  &:focus 
-                        outline: none
-                        border-color: #abd9f1 #bfe3f7 #bfe3f7
-                  &:hover
-                        border-color: #7eb4ea #97cdea #97cdea
-            #submit 
-                  padding: 10px 20px
+            .submit 
+                  padding: 2% 2%
+                  width: 25%
                   border: none
                   border-radius: 3px
+                  font-family: 'Raleway', sans-serif
+                  font-weight: 600
                   cursor: pointer
-                  box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset
-                  background: #669acc
+                  background: #00afbd
                   color: #fff
-                  &:hover 
-                        background: #5c90c2
-            br 
-                  height: 0
-                  clear: both
+                  &:hover
+                        opacity: 0.8
+
+footer 
+      background-color: #2e2e2e                    
 .footer-logo
-      background-color: #2e2e2e
       text-align: center
       padding: 40px 0 48px
-      .footer-links
+.footer-links
+      display: flex
+      justify-content: center
+      padding: 2% 0
+      ul 
+            list-style: none
             display: flex
-            justify-content: center
-            margin-top: 35px
-      a 
-            color: #f7f7f7
-            text-decoration: none
-            font-size: 14px                 
-            font-family: Raleway-Medium
-            margin-right: 40px
-            text-transform: uppercase
-            &:hover
-                  text-decoration: underline
+            margin: 0 auto
+            align-items: center
+            a
+                  color: #f7f7f7
+                  text-decoration: none
+                  font-size: 14px                 
+                  font-family: 'Raleway', sans-serif
+                  font-weight: 500
+                  margin-right: 40px
+                  text-transform: uppercase
+                  &:hover
+                        text-decoration: underline
 .footer-copy
       background-color: #222222
       p 
             text-align: center
             color: #f7f7f7
             font-size: 14px
-            font-family: Raleway-Regular
+            font-family: 'Raleway', sans-serif
             padding: 25px 0
 
 
-@media screen and (max-width: 1366px)
-      header
-            .header
-                  img 
-                        max-width: 250px
-            .header-search
-                  h1 
-                        font-size: 35px
-                        padding-top: 260px
-                  ul
-                        padding: 16px 0 35px 0
-                        a 
-                              font-size: 16px
-            .search-form
-                  padding-bottom: 153px
-                  select 
-                        height: 47px
-                  input
-                        height: 47px
-                        width: 440px
-                  button
-                        font-size: 15px
-                        padding: 15px 15px 15px 15px
-            .other-categories
-                  a
-                        padding: 19px 20px 19px 53px 
 
-@media screen and (max-width: 1070px)
-      div.slick-list.draggable
-            padding: 87px 100px !important
-@media screen and (max-width: 992px)
-      header
-            .header
-                  img 
-                        max-width: 250px
-            .header-search
-                  h1 
-                        font-size: 29px
-                        padding-top: 180px
-                  ul
-                        padding: 16px 0 25px 0
-                        a 
-                              font-size: 14px
-            .search-form
-                  padding-bottom: 153px
-                  select 
-                        height: 42px
-                  input
-                        height: 42px
-                        width: 300px
-                  button
-                        font-size: 11px
-            .other-categories
-                  a
-                        padding: 15px 15px 15px 54px
-@media screen and (max-width: 800px)
-      div.slick-list.draggable
-            padding: 87px 40px !important
-      div.slick-slide.slick-current.slick-active.slick-center
-            position: static
-            right: 0
-      .slick-initialized .slick-slide
-            position: static
-            right: 0
+@media screen and (max-width: 1366px)
+      .top-search-center
+            margin-top: 220px
+      .top-search-title
+            h1
+                  font-size: 35px
+                  margin: 0 0 2%
+      .top-search-subtitle
+            ul li
+                  font-size: 16px
+      .top-form
+            select
+                  height: 54px
+                  padding: 15px 32px 15px 23px
+                  background:
+                        position-x: 98px 
+            input
+                  height: 54px
+                  width: 481px
+                  padding: 11px 10px
+                  font-size: 20px
+            button
+                  font-size: 14px
+                  padding: 15px
+                  height: 54px
+      .other-categories
+            margin-top: 130px
+            a
+                  font-size: 13px
+                  padding: 18px 20px 18px 53px
+      
+@media screen and (max-width: 900px)  
       header
             height: auto
             nav 
@@ -580,105 +525,117 @@ div.slick-slide.slick-current.slick-active.slick-center
                         &:nth-child(3)
                               padding-right: 0
                               border-right: none
-                        
-@media screen and (max-width: 630px)
-      .slide-wrapper .avatar
-            top: -65px
-      .slide-cont
-            max-width: 100%
-      .slide-wrapper .avatar div
-            width: 95px
-      header
-            .header
-                  img 
-                        max-width: 215px
-            .header-search
-                  h1 
-                        font-size: 20px
-                        padding-top: 160px
-                  ul
-                        padding: 16px 0 25px 0
-                        a 
-                              font-size: 12px
-            .search-form
-                  padding-bottom: 140px
-                  select 
-                        font-size: 9px
-                        height: 40px
-                        padding: 15px 22px 15px 21px
-                        background-position-x: 66px
-                        background-size: 7px
-                  input
-                        height: 40px
-                        width: 198px
-                  button
-                        font-size: 9px
-                        padding: 15px 7px 15px 7px
-
-            .other-categories
-                  a
-                        padding: 12px 5px 12px 35px
-                        background-position: 8px center
-                        background-size: 15px
-      .footer-logo
-            padding: 40px 0 7px
-            .footer-links
-                  flex-direction: column
+@media screen and (max-width: 800px)                        
+      .top-search-title
+            h1
+                  font-size: 32px
+      .top-search-subtitle
+            ul li
+                  font-size: 15px
+      .top-form
+            select
+                  height: 48px
+                  padding: 15px 24px 15px 23px
+                  background:
+                        position-x: 87px 
+            input
+                  height: 48px
+                  width: 300px
+                  padding: 11px 10px
+                  font-size: 15px
+            button
+                  font-size: 13px
+                  padding: 9px
+                  height: 48px
+      .other-categories
+            margin-top: 130px
+            a
+                  font-size: 13px
+                  padding: 15px 15px 15px 43px
+                  background-position: 13px center
+      .slide-item 
+            .avatar div
+                  width: 90px
+            .slide-text
+                  padding: 0% 7% 1.5% 7%
                   p 
-                        margin-bottom: 20px
-                  a 
-                        margin: 0           
-@media screen and (max-width: 450px)
-      div.slick-slide.slick-current.slick-active.slick-center
-            height: max-content
-            margin: auto
-      .slide-content
-            padding-bottom: 0
+                        font-size: 12px
+            .name
+                  font-size: 16px
+            .position
+                  font-size: 11px
+@media screen and (max-width: 620px)
+      .header-logo
+            img
+                  max-width: 200px                        
+      .top-search-title
+            h1
+                  font-size: 20px
+      .top-search-subtitle
+            ul li
+                  font-size: 13px
+      .top-form
+            select
+                  height: 30px
+                  padding: 2px 17px 2px 9px
+                  background-position-x: 66px
+                  font-size: 11px
+                  background-size: 7px
+                  background-position-y: 13px
+            input
+                  height: 30px
+                  width: 145px
+                  padding: 11px 10px
+                  font-size: 15px
+            button
+                  font-size: 11px
+                  padding: 2px
+                  height: 30px
+                  width: 82px
+      .other-categories
+            margin-top: 130px
+            a
+                  font-size: 12px
+                  padding: 8px 10px 8px 27px
+                  background-position: 10px center
+                  background-size: 10px
+      .footer-logo
+            padding: 4% 0 0
+      .footer-links ul 
+            flex-direction: column
+            li 
+                  margin-bottom: 3% 
+      .slick-list
+            padding-left: 0 !important
+            padding-right: 0 !important
+            padding-bottom: 51px !important
+      .slick-snext 
+            transform: translateX(0)
+      .slick-sprev 
+            transform: translateX(0)              
+@media screen and (max-width: 400px)
+      .header-logo
+            img
+                  max-width: 170px 
       header
             .menu
-                  width: 240px
-            .header
-                  img 
-                        max-width: 155px
-            .header-search
-                  h1 
-                        font-size: 20px
-                        padding-top: 160px
-                  ul
-                        padding: 16px 0 25px 0
-                        a 
-                              font-size: 12px
-            .search-form
-                  padding-bottom: 140px
-                  select 
-                        font-size: 9px
-                        height: 30px
-                        padding: 9px 11px 9px 5px
-                        background-position-x: 48px
-                        background-size: 7px
-                  input
-                        height: 30px
-                        width: 141px
-                  button
-                        font-size: 9px
-                        padding: 10px 7px 10px 7px
-            .other-categories
-                  a
-                        padding: 8px 5px 8px 27px
-                        background-position: 9px center
-                        background-size: 12px
-                        font-size: 11px
-      main
-            .products
-                  padding: 0 10px 
-            .products-title
-                  padding: 30px 10px
-                  h2 
-                        font-size: 25
-                  p 
-                        font-size: 15px
-            .products-item
-                  margin-right: 0     
-                        
+                  right: 0
+                  width: 237px
+      .slick-current
+            padding-bottom: 31px
+            padding-top: 12px
+      .slide-item
+            padding-bottom: 60px
+      .slide-cont
+            padding-bottom: 20px
+      .feedback #feedback-form 
+            .file-upload
+                  width: 50%
+                  margin: 0 auto
+                  padding: 5px 4px
+            .submit
+                  width: 100%
+                  padding: 3% 2%
+                   
 
                         

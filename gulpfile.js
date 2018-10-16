@@ -56,17 +56,14 @@ gulp.task('clean', function() {
 
 gulp.task('build', ['clean', 'sass', 'scripts'], function() {
 
-	const buildCss = gulp.src([ // Переносим бібліотеки в продакшен
-		'app/css/index.css',
-		'app/css/libs.min.css'
-		])
-	.pipe(gulp.dest('dist/css'))
+	const buildCss = gulp.src('app/css/**/*')// Переносим бібліотеки в продакшен	
+	.pipe(gulp.dest('dist/css'));
 
 	const buildFonts = gulp.src('app/fonts/**/*') // Переносимо шрифти в продакшен
-	.pipe(gulp.dest('dist/fonts'))
+	.pipe(gulp.dest('dist/fonts'));
 
 	const buildJs = gulp.src('app/js/**/*') // Переносимо скрипти в продакшен
-	.pipe(gulp.dest('dist/js'))
+	.pipe(gulp.dest('dist/js'));
 
 	const buildHtml = gulp.src('app/*.html') // Переносимо HTML в продакшен
 	.pipe(gulp.dest('dist'));

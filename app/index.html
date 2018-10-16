@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>testProject</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/index.css">
@@ -12,9 +13,11 @@
 
 <body>
 	<header>
-		<div class="header">
+		<div class="header container">
 			<div class="header-logo">
-				<img src="img/logo-header.png" alt="logo Find Parrot">
+				<a href="#body">
+					<img src="img/logo-header.png" alt="logo Find Parrot">
+				</a>
 			</div>
 			<nav>
 				<div class="menuBurger">&#9776;</div>
@@ -34,46 +37,46 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="header-search">
-			<h1>Quick Search for Your
-				<span>Perfect Product</span>
-			</h1>
-			<ul>
-				<li>
-					<a href="#">innovate</a>
-				</li>
-				<li>
-					<a href="#">list</a>
-				</li>
-				<li>
-					<a href="#">connect</a>
-				</li>
-			</ul>
-			<form class="search-form" action="">
-				<p>
-					<select name="select-form" id="">
-						<option value="Category">Category</option>
-						<option value="Category-1">Category 1</option>
-						<option value="Category-2">Category 2</option>
-						<option value="Category-3">Category 3</option>
-						<option value="Category-4">Category 4</option>
-					</select>
-				</p>
-				<p>
-					<input type="search">
-				</p>
-				<p>
-					<button type="submit">start searching</button>
-				</p>
-			</form>
-			<div class="other-categories">
-				<a class="all-categories" href="#">All-categories</a>
-				<a class="how-works" href="#">How it works</a>
-			</div>
-
-		</div>
 	</header>
+
 	<main>
+		<section>
+			<div class="top-search">
+				<div class="top-search-center">
+					<div class="top-search-title">
+						<h1>Quick Search for Your
+							<span>Perfect Product</span>
+						</h1>
+					</div>
+					<div class="top-search-subtitle">
+						<ul>
+							<li>innovate</li>
+							<li>list</li>
+							<li>connect</li>
+						</ul>
+					</div>
+
+					<form class="top-form" action="#" enctype="text/plain">
+						<select name="select-form">
+							<option value="Category">Category</option>
+							<option value="Category-1">Category 1</option>
+							<option value="Category-2">Category 2</option>
+							<option value="Category-3">Category 3</option>
+							<option value="Category-4">Category 4</option>
+						</select>
+
+						<input type="search">
+						<button type="submit">start searching</button>
+					</form>
+				</div>
+				<div class="other-categories">
+					<a class="all-categories" href="#">All-categories</a>
+					<a class="how-works" href="#">How it works</a>
+				</div>
+
+			</div>
+		</section>
+
 		<div class="products wrapper">
 			<div class="products-title">
 				<h2>Most Popular Products</h2>
@@ -159,20 +162,19 @@
 		</div>
 		<div class="testimonials">
 			<div class="slide-header">
-				<p class="title">Testimonials</p>
+				<h2>Testimonials</h2>
 				<p class="subtitle">What our customers told about us</p>
 			</div>
 			<div class="slide-cont">
-				<div class="center slider">
-					<div>
-						<div class="slide-wrapper">
+				<div class="rev-slider">
+					<div class="rev-slide">
+						<div class="slide-item">
 							<div class="avatar">
 								<div>
 									<img src="img/avatar-John.jpg" alt="avatar-John">
 								</div>
-
 							</div>
-							<div class="slide-feedback">
+							<div class="slide-text">
 								<p>I have been incredibly impressed with LinkUp team of developers. They worked hard to deliver the highest-quality
 									product possible and exceeded my expectations at every step of the way. I initially found Andriy in search of a
 									better price than what I could find locally with other development firms. But what I found - in addition to a better
@@ -186,19 +188,18 @@
 						</div>
 					</div>
 
-					<div>
-						<div class="slide-wrapper">
+					<div class="rev-slide">
+						<div class="slide-item">
 							<div class="avatar">
 								<div>
 									<img src="img/avatar-Oleh-Zavadsky.jpg" alt="avatar-Oleh-Zavadsky">
 								</div>
 
 							</div>
-							<div class="slide-feedback">
+							<div class="slide-text">
 								<p>Nice company willing to work and get educated at he same time. Ready to face any challenges and very friendly with
-									customers. They quote very humbly and every invoice can be discussed well in advance. We made a custom design web
-									shop with them and keep on cooperating on development and maintenance. Highly recommended.
-								</p>
+										customers. They quote very humbly and every invoice can be discussed well in advance. We made a custom design web
+										shop with them and keep on cooperating on development and maintenance. Highly recommended.</p>
 							</div>
 							<div class="footer">
 								<p class="name">Oleh Zavadsky</p>
@@ -206,18 +207,17 @@
 							</div>
 						</div>
 					</div>
-					<div>
-						<div class="slide-wrapper">
+					<div class="rev-slide">
+						<div class="slide-item">
 							<div class="avatar">
 								<div>
 									<img src="img/avatar-Adam-Frank.jpg" alt="avatar-Adam-Frank">
 								</div>
 
 							</div>
-							<div class="slide-feedback">
+							<div class="slide-text">
 								<p>Loved working with LinkUp. Great guys, developers, and management. They knew how to do the job, in the most professional
-									way.
-								</p>
+										way.</p>
 							</div>
 							<div class="footer">
 								<p class="name">Adam Frank</p>
@@ -226,50 +226,52 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
 		<div class="feedback">
 			<h2>Feedback</h2>
-			<form enctype="multipart/form-data" method="post" id="feedback-form">
-				<label for="name">User name:</label>
-				<input type="text" name="Name" id="" required placeholder="For example: Max Pavlushchenko" x-autocompletetype="name" class="w100 border">
-				<label for="contact">Email:</label>
-				<input type="email" name="Email" id="" required placeholder="For example: max182@gmail.com" x-autocompletetype="email" class="w100 border">
-				<label for="file">File:</label>
+			<form method="post" id="feedback-form">
+				<label>User name:</label>
+				<input type="text" name="Name" required placeholder="For example: Max Pavlushchenko">
+				<label>Email:</label>
+				<input type="email" required placeholder="For example: max182@gmail.com">
+				<label>File:</label>
 				<div class="file-upload">
 					<label>
-						<input type="file" name="file" class="w100">
+						<input type="file">
 						<span>select file</span>
 					</label>
 				</div>
 				<input type="text" id="filename" class="filename" disabled>
-				<label class="message" for="message">Message:</label>
-				<textarea name="Message" id="" required rows="5" placeholder="Write us a letter…" class="w100 border"></textarea>
-				<br>
-				<input value="Upload" type="submit" id="submit" accept="image/*,application/doc, application/pdf">
+				<label class="message">Message:</label>
+				<textarea required rows="5" placeholder="Write us a letter…"></textarea>
+				<input value="Upload" type="submit" class="submit" accept="image/*,application/doc, application/pdf">
 			</form>
 		</div>
 	</main>
 	<footer>
 		<div class="footer-logo">
 			<img src="img/logo-footer.png" alt="logo-footer">
-			<div class="footer-links">
-				<p>
-					<a href="">About us</a>
-				</p>
-				<p>
-					<a href="">terms of service</a>
-				</p>
-				<p>
-					<a href="">privacy policy</a>
-				</p>
-				<p>
-					<a href="">Contact us</a>
-				</p>
-			</div>
 		</div>
+		<div class="footer-links">
+			<ul>
+				<li>
+					<a href="">About us</a>
+				</li>
+				<li>
+					<a href="">terms of service</a>
+				</li>
+				<li>
+					<a href="">privacy policy</a>
+				</li>
+				<li>
+					<a href="">Contact us</a>
+				</li>
+			</ul>
+
+		</div>
+
 		<div class="footer-copy">
 			<p>&copy; 2018 Find Parrot</p>
 		</div>
