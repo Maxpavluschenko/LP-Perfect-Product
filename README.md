@@ -10,6 +10,6 @@
 
 ## Інструкція для старта проекта
 * Клонувати репозиторій
-> git clone https://github.com/Maxpavluschenko/LP-Perfect-Product
+> git clone https://github.com/Maxpavluschenko/LP-Perfect-Product.git
 
 * Запустити команду npm i в терміналі. Дана команда встановить всі пакети, які вказані у файлі packege.json, і всі їх залежності
