@@ -13,10 +13,10 @@
   window.onscroll = function() {
     scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled > 50) {
-      $(".header").css({ background: "#eeeeee" });
+      $(".bg").css({ background: "#eeeeee" });
     }
     if (50 > scrolled) {
-      $(".header").css({ background: "none" });
+      $(".bg").css({ background: "none" });
     }
   };
 

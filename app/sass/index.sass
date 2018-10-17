@@ -20,8 +20,12 @@ body
 	padding: 0
 p 
       margin: 0
-header
+.bg
       background-color: #e4e5e9
+      width: 100%
+      position: fixed
+      height: 79px
+      z-index: 4000
       .header
             display: flex
             width: 100%
@@ -66,6 +70,7 @@ header
                         text-transform: uppercase
                         &:hover
                               text-decoration: underline
+                              
       .menuBurger
             color: #fff
             padding: 10px 15px
@@ -401,7 +406,7 @@ main
                   box-shadow: 0 0 5px #5cd053
                   border-color: #28921f
             .file-upload 
-                  width: max-content 
+                  width: 20% 
                   background: #6da047
                   border-radius: 3px
                   padding: 7px 10px
@@ -501,23 +506,23 @@ footer
                   font-size: 13px
                   padding: 18px 20px 18px 53px
       
-@media screen and (max-width: 900px)  
-      header
-            height: auto
+@media screen and (max-width: 900px)
+      .header  
             nav 
                   position: relative
             .menuBurger
                   display: inline-block
                   font-size: 29px
-                  color: $green-color
+                  color: #484848
                   cursor: pointer
             .menu
                   display: none
                   position: absolute
-                  top: 64px
+                  top: 68px
                   right: 10px
                   width: 300px
                   background: rgba(255, 255, 255, 1)
+                  box-shadow: 2px 3px 9px 2px
                   padding: 15px
                   z-index: 20 
                   li
@@ -525,6 +530,8 @@ footer
                         &:nth-child(3)
                               padding-right: 0
                               border-right: none
+                        a 
+                              font-weight: 700
 @media screen and (max-width: 800px)                        
       .top-search-title
             h1
@@ -614,13 +621,15 @@ footer
       .slick-sprev 
             transform: translateX(0)              
 @media screen and (max-width: 400px)
-      .header-logo
-            img
-                  max-width: 170px 
-      header
+      .header
+            .header-logo
+                  img
+                        max-width: 170px 
             .menu
                   right: 0
-                  width: 237px
+                  left: 0
+                  width: 100%
+                  position: fixed
       .slick-current
             padding-bottom: 31px
             padding-top: 12px

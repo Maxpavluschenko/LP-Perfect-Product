@@ -21,9 +21,13 @@ body {
 p {
   margin: 0; }
 
-header {
-  background-color: #e4e5e9; }
-  header .header {
+.bg {
+  background-color: #e4e5e9;
+  width: 100%;
+  position: fixed;
+  height: 79px;
+  z-index: 4000; }
+  .bg .header {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -45,17 +49,17 @@ header {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    header .header .header-logo {
+    .bg .header .header-logo {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-      header .header .header-logo img {
+      .bg .header .header-logo img {
         max-height: 65px; }
-  header nav {
+  .bg nav {
     padding: 0;
     margin: 0; }
-  header .menu {
+  .bg .menu {
     list-style-type: none;
     display: -webkit-box;
     display: -webkit-flex;
@@ -65,25 +69,25 @@ header {
     overflow: hidden;
     padding: 0;
     margin: 0; }
-    header .menu li {
+    .bg .menu li {
       list-style-type: none;
       margin-right: 45px;
       padding: 17px 0; }
-      header .menu li:nth-child(3) {
+      .bg .menu li:nth-child(3) {
         padding-right: 37px;
         border-right: 1px solid #b4b7b9; }
-      header .menu li:last-child {
+      .bg .menu li:last-child {
         margin-right: 0; }
-      header .menu li a {
+      .bg .menu li a {
         font-family: 'Raleway', sans-serif;
         text-decoration: none;
         display: inline-block;
         font-size: 14px;
         color: black;
         text-transform: uppercase; }
-        header .menu li a:hover {
+        .bg .menu li a:hover {
           text-decoration: underline; }
-  header .menuBurger {
+  .bg .menuBurger {
     color: #fff;
     padding: 10px 15px;
     cursor: pointer;
@@ -507,9 +511,7 @@ main {
               box-shadow: 0 0 5px #5cd053;
       border-color: #28921f; }
     .feedback #feedback-form .file-upload {
-      width: -webkit-max-content;
-      width: -moz-max-content;
-      width: max-content;
+      width: 20%;
       background: #6da047;
       -webkit-border-radius: 3px;
               border-radius: 3px;
@@ -621,29 +623,31 @@ footer {
       padding: 18px 20px 18px 53px; } }
 
 @media screen and (max-width: 900px) {
-  header {
-    height: auto; }
-    header nav {
-      position: relative; }
-    header .menuBurger {
-      display: inline-block;
-      font-size: 29px;
-      color: #0e7200;
-      cursor: pointer; }
-    header .menu {
-      display: none;
-      position: absolute;
-      top: 64px;
-      right: 10px;
-      width: 300px;
-      background: white;
-      padding: 15px;
-      z-index: 20; }
-      header .menu li {
-        float: none; }
-        header .menu li:nth-child(3) {
-          padding-right: 0;
-          border-right: none; } }
+  .header nav {
+    position: relative; }
+  .header .menuBurger {
+    display: inline-block;
+    font-size: 29px;
+    color: #484848;
+    cursor: pointer; }
+  .header .menu {
+    display: none;
+    position: absolute;
+    top: 68px;
+    right: 10px;
+    width: 300px;
+    background: white;
+    -webkit-box-shadow: 2px 3px 9px 2px;
+            box-shadow: 2px 3px 9px 2px;
+    padding: 15px;
+    z-index: 20; }
+    .header .menu li {
+      float: none; }
+      .header .menu li:nth-child(3) {
+        padding-right: 0;
+        border-right: none; }
+      .header .menu li a {
+        font-weight: 700; } }
 
 @media screen and (max-width: 800px) {
   .top-search-title h1 {
@@ -737,11 +741,13 @@ footer {
             transform: translateX(0); } }
 
 @media screen and (max-width: 400px) {
-  .header-logo img {
+  .header .header-logo img {
     max-width: 170px; }
-  header .menu {
+  .header .menu {
     right: 0;
-    width: 237px; }
+    left: 0;
+    width: 100%;
+    position: fixed; }
   .slick-current {
     padding-bottom: 31px;
     padding-top: 12px; }
